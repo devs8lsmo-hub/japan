@@ -3,220 +3,196 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Japón 2026 | Itinerario</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#f6f4ee">
+<title>Japón 2026 | Guía de viaje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-body { font-family: 'Poppins', sans-serif; background: #eef8fb; color: #222; line-height: 1.7; }
-img { display: block; max-width: 100%; height: auto; }
-a { color: #008b98; }
-header {
-    min-height: 100vh;
-    background: linear-gradient(rgba(0,0,0,.42), rgba(0,0,0,.48)), url("Japan2026_assets/image4.jpeg") center/cover;
-    display: flex; justify-content: center; align-items: center; text-align: center; color: white; padding: 30px;
-}
-header h1 { font-size: 70px; line-height: 1.15; font-weight: 700; }
-header h2 { font-size: 30px; font-weight: 300; margin-top: 20px; }
-header p { margin-top: 25px; font-size: 18px; }
-nav { position: sticky; top: 0; background: white; box-shadow: 0 5px 20px rgba(0,0,0,.1); padding: 15px; display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 24px; z-index: 999; }
-nav a { text-decoration: none; color: #0099a8; font-weight: 600; white-space: nowrap; }
-.container { width: 90%; max-width: 1200px; margin: auto; padding: 55px 0; }
-h2.section { font-size: 36px; margin-bottom: 25px; color: #008b98; }
-.card, .day { background: white; border-radius: 18px; padding: 30px; margin: 25px 0; box-shadow: 0 15px 40px rgba(0,0,0,.08); }
-.timeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
-.timeline .card { margin: 0; }
-.day { margin-top: 35px; }
-.day h3 { font-size: 28px; color: #00a6b6; margin-bottom: 16px; }
-h4 { margin: 20px 0 8px; color: #176d78; }
-ul { padding-left: 22px; margin: 12px 0; }
-li { margin-bottom: 8px; }
-.badge { display: inline-block; background: #00a6b6; color: white; padding: 7px 17px; border-radius: 50px; margin-bottom: 16px; font-size: 14px; }
-.price { background: #dff9fb; padding: 14px 16px; border-left: 5px solid #00a8b5; margin-top: 18px; border-radius: 8px; }
-.photo { width: 100%; max-height: 420px; object-fit: cover; border-radius: 12px; margin-top: 20px; }
-.hotel-shot { width: 100%; border-radius: 10px; border: 1px solid #e6e6e6; }
-.table-container { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-.travel-table { width: 100%; border-collapse: collapse; min-width: 720px; font-size: 14px; }
-.travel-table th { background: #012a6b; color: white; padding: 13px; text-align: left; }
-.travel-table td { padding: 12px; border: 1px solid #ddd; vertical-align: top; }
-.travel-table tbody tr:nth-child(even) { background: #f7fbfd; }
-.notice { background: #fff7df; border-left: 5px solid #e2a72e; padding: 16px 20px; border-radius: 8px; margin: 20px 0; }
-.stay-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.stay-grid .card { margin: 0; padding: 18px; }
-footer { background: #0099a8; color: white; padding: 50px 20px; text-align: center; margin-top: 50px; }
-@media (max-width: 768px) {
-    header h1 { font-size: 42px; }
-    header h2 { font-size: 21px; }
-    nav { gap: 8px 14px; padding: 12px 8px; }
-    nav a { font-size: 13px; }
-    .container { width: 94%; padding: 35px 0; }
-    h2.section { font-size: 29px; }
-    .card, .day { padding: 22px; }
-    .day h3 { font-size: 24px; }
-}
+:root { --ink:#253632; --muted:#66736c; --green:#315c4d; --mint:#e7efe8; --paper:#f6f4ee; --white:#fff; --gold:#bd8c48; --line:#e6e5dc; }
+* { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
+body { font-family:'DM Sans',sans-serif; background:var(--paper); color:var(--ink); line-height:1.7; }
+a { color:var(--green); }
+img { display:block; max-width:100%; height:auto; }
+header { min-height:82vh; background:linear-gradient(90deg,rgba(17,34,29,.65),rgba(17,34,29,.12)),url('Japan2026_assets/image4.jpeg') center/cover; display:flex; align-items:flex-end; color:white; padding:clamp(28px,8vw,110px); }
+.hero { max-width:760px; }
+.eyebrow { text-transform:uppercase; letter-spacing:.18em; font-size:.78rem; font-weight:700; color:#e7d4ad; }
+header h1 { font:700 clamp(3rem,8vw,6.6rem)/1.02 'Playfair Display',serif; margin:14px 0; }
+header h2 { font-size:clamp(1.1rem,2.4vw,1.55rem); font-weight:400; }
+header p { margin-top:22px; color:#f1eee5; }
+nav { position:sticky; top:0; z-index:10; display:flex; justify-content:center; flex-wrap:wrap; gap:8px 22px; padding:14px 20px; background:rgba(255,255,255,.96); box-shadow:0 4px 20px #1c302512; }
+nav a { text-decoration:none; font-size:.9rem; font-weight:700; white-space:nowrap; }
+.container { width:min(1120px,91%); margin:auto; padding:64px 0; }
+section { scroll-margin-top:82px; margin-bottom:72px; }
+.section-kicker { color:var(--gold); text-transform:uppercase; letter-spacing:.15em; font-size:.75rem; font-weight:700; }
+h2.section { font:700 clamp(2rem,4vw,3rem)/1.15 'Playfair Display',serif; margin:7px 0 24px; color:var(--green); }
+.card,.day { background:var(--white); border:1px solid #e9e8e1; border-radius:20px; padding:clamp(22px,4vw,34px); box-shadow:0 12px 35px #24372d0a; }
+.card p + p { margin-top:12px; }
+.intro-grid,.route-grid,.stay-grid,.day-grid,.idea-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; }
+.route-card { border-radius:18px; background:var(--white); padding:22px; border-top:4px solid var(--green); box-shadow:0 10px 24px #24372d0a; }
+.route-card strong { display:block; color:var(--green); font-size:1.05rem; }
+.route-card span { color:var(--muted); font-size:.94rem; }
+.day { margin:20px 0; }
+.day-head { display:flex; align-items:flex-start; gap:14px; margin-bottom:16px; }
+.day-number { flex:0 0 48px; height:48px; display:grid; place-items:center; border-radius:50%; background:var(--mint); color:var(--green); font-weight:700; }
+.day h3 { font:700 clamp(1.35rem,3vw,1.8rem)/1.25 'Playfair Display',serif; color:var(--green); }
+.day-date { display:block; font-size:.84rem; font-weight:700; color:var(--gold); margin-bottom:3px; }
+.day-lead { color:var(--muted); margin:0 0 18px 62px; }
+.flow { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:12px; margin:18px 0 0 62px; }
+.flow-item { padding:15px 16px; background:#f7f8f4; border-radius:13px; }
+.flow-item b { display:block; color:var(--green); margin-bottom:4px; }
+.flow-item p { color:var(--muted); font-size:.93rem; }
+.tag { display:inline-block; padding:5px 11px; border-radius:99px; background:var(--mint); color:var(--green); font-size:.78rem; font-weight:700; margin:0 6px 6px 0; }
+.callout { background:#f5efe2; border-left:4px solid var(--gold); border-radius:8px; padding:15px 18px; margin:18px 0; }
+.callout strong { color:#72562c; }
+.photo { width:100%; max-height:430px; object-fit:cover; border-radius:14px; margin-top:20px; }
+.hotel-shot { width:100%; border:1px solid var(--line); border-radius:12px; }
+.stay-grid .card { padding:18px; }
+.stay-grid h3 { margin:0 0 12px; color:var(--green); }
+.idea { background:var(--mint); padding:20px; border-radius:16px; }
+.idea h3 { color:var(--green); margin-bottom:8px; }
+.idea p,.muted { color:var(--muted); }
+.list { padding-left:20px; margin:10px 0; }
+.list li { padding-left:3px; margin:6px 0; }
+.image-wrap { background:white; padding:16px; border-radius:18px; }
+footer { background:var(--green); color:#fff; text-align:center; padding:42px 20px; }
+footer p + p { color:#d5e0d6; font-size:.9rem; margin-top:5px; }
+@media(max-width:680px) { header { min-height:72vh; } nav { justify-content:flex-start; gap:8px 16px; } nav a { font-size:.82rem; } .container { padding:42px 0; } section { margin-bottom:52px; } .day-lead,.flow { margin-left:0; } .flow { grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
-
 <header>
-    <div>
-        <h1>🇯🇵 JAPÓN 2026</h1>
-        <h2>Itinerario de viaje</h2>
-        <p>4 diciembre · 15 diciembre</p>
-    </div>
+  <div class="hero">
+    <span class="eyebrow">Cuaderno de viaje · 4—15 diciembre</span>
+    <h1>Japón,<br>sin prisas.</h1>
+    <h2>Una guía flexible para disfrutar el camino, no correr detrás del reloj.</h2>
+    <p>Tokio · Kioto · Takayama · Kanazawa</p>
+  </div>
 </header>
-
-<nav>
-    <a href="#intro">📖 Introducción</a>
-    <a href="#ruta">🗺️ Ruta</a>
-    <a href="#transportes">🚆 Transportes</a>
-    <a href="#alojamientos">🏨 Alojamientos</a>
-    <a href="#tokio">🗼 Tokio</a>
-    <a href="#kioto">⛩️ Kioto</a>
-    <a href="#takayama">🏘️ Takayama</a>
-    <a href="#kanazawa">🌿 Kanazawa</a>
-    <a href="#restaurantes">🍜 Restaurantes</a>
+<nav aria-label="Navegación principal">
+  <a href="#intro">La idea</a><a href="#ruta">Ruta</a><a href="#transportes">Transportes</a><a href="#alojamientos">Alojamientos</a><a href="#tokio">Tokio</a><a href="#kioto">Kioto</a><a href="#takayama">Takayama</a><a href="#kanazawa">Kanazawa</a><a href="#restaurantes">Comer</a>
 </nav>
-
 <main class="container">
-    <section id="intro">
-        <h2 class="section">Bienvenidos a Japón</h2>
-        <div class="card">
-            <p>Un recorrido por Tokio, Kioto, Takayama y Kanazawa, con visitas urbanas, templos, mercados y paisajes tradicionales.</p>
-            <ul>
-                <li>🗼 Tokio: barrios, santuarios, mercados y Shibuya Sky.</li>
-                <li>⛩️ Kioto: Fushimi Inari, Higashiyama, Arashiyama y Osaka.</li>
-                <li>🏘️ Takayama: estancia del 12 al 14 de diciembre.</li>
-                <li>🌿 Kanazawa: estancia del 14 al 15 de diciembre y regreso a Tokio.</li>
-            </ul>
-        </div>
-        <div class="notice"><strong>Nota sobre el original:</strong> la diapositiva de transportes muestra fechas de septiembre, mientras que el resto del itinerario indica diciembre. Algunas diapositivas de Kioto también combinan planes distintos bajo un mismo día; se conserva el contenido y se señalan esas diferencias.</div>
-    </section>
+  <section id="intro">
+    <span class="section-kicker">Antes de salir</span>
+    <h2 class="section">Una ruta, muchas maneras de vivirla</h2>
+    <div class="card">
+      <p>Esta guía reúne las visitas del itinerario en bloques del día, en lugar de fijar una hora para cada parada. Elige lo que más te apetezca, deja espacio para comer y descansar, y toma las horas de apertura o las reservas como única referencia fija.</p>
+      <div class="intro-grid" style="margin-top:20px">
+        <div><span class="tag">Tokio</span><p class="muted">Barrios, santuarios, mercados y una vista desde Shibuya Sky.</p></div>
+        <div><span class="tag">Kioto</span><p class="muted">Templos, calles tradicionales, Arashiyama y una posible escapada a Osaka.</p></div>
+        <div><span class="tag">Alpes japoneses</span><p class="muted">Dos noches en Takayama y una parada en Kanazawa antes de volver a Tokio.</p></div>
+      </div>
+    </div>
+    <div class="callout"><strong>Nota para tener en cuenta:</strong> la imagen original de transportes parece mostrar fechas de septiembre, mientras que el resto del viaje indica diciembre. Además, las notas de Kioto mezclan planes para días distintos. Confirma los trayectos y usa las propuestas de abajo como opciones flexibles, no como reservas ni horarios confirmados.</div>
+  </section>
 
-    <section id="ruta">
-        <h2 class="section">Resumen de la ruta</h2>
-        <div class="timeline">
-            <div class="card"><strong>4–8 diciembre</strong><br>Tokio · llegada a Narita, barrios del centro y salida.</div>
-            <div class="card"><strong>8–12 diciembre</strong><br>Kioto · excursión a Osaka incluida en las notas.</div>
-            <div class="card"><strong>12–14 diciembre</strong><br>Takayama · llegada, estancia y salida.</div>
-            <div class="card"><strong>14–15 diciembre</strong><br>Kanazawa · llegada, salida y trayecto a Tokio.</div>
-        </div>
-    </section>
+  <section id="ruta">
+    <span class="section-kicker">El recorrido</span><h2 class="section">Doce días, cuatro paradas</h2>
+    <div class="route-grid">
+      <div class="route-card"><strong>4—8 dic · Tokio</strong><span>Llegada por Narita, primeros barrios y últimos paseos por la ciudad.</span></div>
+      <div class="route-card"><strong>8—12 dic · Kioto</strong><span>Templos, centro histórico, Arashiyama y Osaka como alternativa.</span></div>
+      <div class="route-card"><strong>12—14 dic · Takayama</strong><span>Cambio de ritmo y tiempo para explorar sin una agenda cerrada.</span></div>
+      <div class="route-card"><strong>14—15 dic · Kanazawa</strong><span>Última parada antes del regreso a Tokio.</span></div>
+    </div>
+  </section>
 
-    <section id="transportes">
-        <h2 class="section">🚆 Transportes</h2>
-        <div class="card">
-            <p>Plan de trayectos, transporte recomendado y coste diario según la diapositiva de transportes.</p>
-            <img class="photo" src="Japan2026_assets/image2.png" alt="Tabla de transporte por fechas, trayectos, tipo de transporte y coste diario">
-        </div>
-    </section>
+  <section id="transportes">
+    <span class="section-kicker">Moverse entre ciudades</span><h2 class="section">Transportes</h2>
+    <div class="card"><p>La presentación incluye una tabla de trayectos y costes. Revisa las fechas y los servicios actualizados antes de viajar; en los días de traslado conviene dejar el resto del plan abierto.</p><img class="photo" src="Japan2026_assets/image2.png" alt="Tabla original de transporte por fechas, trayectos, tipo de transporte y coste diario"></div>
+  </section>
 
-    <section id="alojamientos">
-        <h2 class="section">🏨 Alojamientos</h2>
-        <div class="stay-grid">
-            <div class="card"><h3>Tokio · Kagurazaka</h3><img class="hotel-shot" src="Japan2026_assets/image3.png" alt="Reserva de alojamiento en el distrito de Shinjuku, cerca de Kagurazaka"></div>
-            <div class="card"><h3>Kioto · Muromachi</h3><img class="hotel-shot" src="Japan2026_assets/image7.png" alt="Reserva de KIORI Exec Muromachi del 8 al 12 de diciembre"></div>
-            <div class="card"><h3>Takayama</h3><img class="hotel-shot" src="Japan2026_assets/image12.png" alt="Reserva de alojamiento en Takayama del 12 al 14 de diciembre"></div>
-            <div class="card"><h3>Kanazawa</h3><img class="hotel-shot" src="Japan2026_assets/image13.png" alt="Información de alojamiento en Kanazawa"></div>
-        </div>
-    </section>
+  <section id="alojamientos">
+    <span class="section-kicker">Dónde descansar</span><h2 class="section">Alojamientos</h2>
+    <div class="stay-grid">
+      <div class="card"><h3>Tokio · Kagurazaka</h3><img class="hotel-shot" src="Japan2026_assets/image3.png" alt="Reserva de alojamiento cerca de Kagurazaka"></div>
+      <div class="card"><h3>Kioto · Muromachi</h3><img class="hotel-shot" src="Japan2026_assets/image7.png" alt="Reserva de KIORI Exec Muromachi"></div>
+      <div class="card"><h3>Takayama</h3><img class="hotel-shot" src="Japan2026_assets/image12.png" alt="Reserva de alojamiento en Takayama"></div>
+      <div class="card"><h3>Kanazawa</h3><img class="hotel-shot" src="Japan2026_assets/image13.png" alt="Información del alojamiento en Kanazawa"></div>
+    </div>
+  </section>
 
-    <section id="tokio">
-        <h2 class="section">🗼 Tokio · 4–8 diciembre</h2>
-        <div class="day" id="dia4">
-            <span class="badge">Viernes 4</span>
-            <h3>✈️ Llegada a Narita y Kagurazaka</h3>
-            <div class="table-container"><table class="travel-table"><thead><tr><th>Hora</th><th>Qué hacer</th></tr></thead><tbody>
-                <tr><td>11:30</td><td>Llegada a Narita</td></tr><tr><td>13:00</td><td>Inmigración y traslado al hotel</td></tr><tr><td>15:00–16:00</td><td>Check-in y comida</td></tr><tr><td>16:00–17:30</td><td>Paseo por Kagurazaka y santuario Akagi</td></tr><tr><td>18:00</td><td>Traslado a Shinjuku</td></tr><tr><td>18:30</td><td>Omoide Yokocho</td></tr><tr><td>19:00</td><td>Golden Gai</td></tr><tr><td>20:00</td><td>Kabukicho y cena</td></tr>
-            </tbody></table></div>
-        </div>
-        <div class="day" id="dia5">
-            <span class="badge">Sábado 5</span>
-            <h3>🏮 Asakusa, Ueno y Akihabara</h3>
-            <div class="table-container"><table class="travel-table"><thead><tr><th>Hora</th><th>Qué hacer</th></tr></thead><tbody>
-                <tr><td>08:30</td><td>Salida del hotel</td></tr><tr><td>09:00</td><td>Templo Sensō-ji</td></tr><tr><td>10:00</td><td>Nakamise Street</td></tr><tr><td>11:00</td><td>Kappabashi Street</td></tr><tr><td>12:30</td><td>Comida</td></tr><tr><td>13:30</td><td>Ueno Park</td></tr><tr><td>14:30</td><td>Ameyoko Market</td></tr><tr><td>16:00</td><td>Akihabara</td></tr><tr><td>18:00</td><td>Ikebukuro (opcional)</td></tr><tr><td>18:30</td><td>Sunshine City y tiendas Seibu</td></tr><tr><td>20:00</td><td>Cena</td></tr>
-            </tbody></table></div>
-            <img class="photo" src="Japan2026_assets/image4.jpeg" alt="Akihabara iluminado por la noche">
-        </div>
-        <div class="day" id="dia6">
-            <span class="badge">Domingo 6</span>
-            <h3>🌳 Harajuku, Meiji y Shibuya</h3>
-            <div class="table-container"><table class="travel-table"><thead><tr><th>Hora</th><th>Qué hacer</th></tr></thead><tbody>
-                <tr><td>08:30</td><td>Salida del hotel</td></tr><tr><td>09:00</td><td>Shinjuku Gyoen</td></tr><tr><td>10:30</td><td>Santuario Meiji</td></tr><tr><td>11:30</td><td>Takeshita Street</td></tr><tr><td>12:30</td><td>Comida en Harajuku</td></tr><tr><td>13:30</td><td>Omotesando</td></tr><tr><td>14:30</td><td>Cat Street</td></tr><tr><td>15:30</td><td>Miyashita Park</td></tr><tr><td>16:00</td><td>Cruce de Shibuya</td></tr><tr><td>16:15</td><td>Estatua de Hachiko</td></tr><tr><td>16:30–17:45</td><td>Shibuya Sky</td></tr><tr><td>18:00</td><td>Nonbei Yokocho</td></tr><tr><td>19:30</td><td>Cena</td></tr>
-            </tbody></table></div>
-            <div class="price">⭐ Imprescindible: buscar rooftop en Shibuya Sky. La presentación recomienda reservar esta experiencia.</div>
-            <img class="photo" src="Japan2026_assets/image5.jpeg" alt="Torii de madera en un santuario de Tokio">
-        </div>
-        <div class="day" id="dia7">
-            <span class="badge">Lunes 7</span>
-            <h3>🐟 Tsukiji, Ginza, TeamLab y Tokyo Tower</h3>
-            <div class="table-container"><table class="travel-table"><thead><tr><th>Hora</th><th>Qué hacer</th></tr></thead><tbody>
-                <tr><td>08:30</td><td>Tsukiji Outer Market</td></tr><tr><td>10:30</td><td>Ginza y tiendas</td></tr><tr><td>12:00</td><td>Santuario Hie</td></tr><tr><td>13:00</td><td>Comida</td></tr><tr><td>14:00</td><td>Azabudai Hills</td></tr><tr><td>15:00–17:00</td><td>TeamLab Borderless</td></tr><tr><td>17:30</td><td>Paseo por Roppongi</td></tr><tr><td>19:00</td><td>Cena</td></tr>
-            </tbody></table></div>
-            <img class="photo" src="Japan2026_assets/image6.jpeg" alt="Mercado japonés cubierto">
-        </div>
-    </section>
+  <section id="tokio">
+    <span class="section-kicker">4—8 diciembre</span><h2 class="section">🗼 Tokio</h2>
+    <article class="day" id="dia4">
+      <div class="day-head"><span class="day-number">04</span><div><span class="day-date">Viernes · llegada</span><h3 aterrizaje y primer paseo</h3></div></div>
+      <p class="day-lead">Día de llegada a Narita: ve con calma, deja las maletas y adapta el plan a cómo te sientas después del viaje.</p>
+      <div class="flow"><div class="flow-item"><b>Lo necesario</b><p>Inmigración, traslado y check-in en Kagurazaka.</p></div><div class="flow-item"><b>Si queda energía</b><p>Paseo tranquilo por el barrio y una primera comida cerca del alojamiento.</p></div><div class="flow-item"><b>Sin presión</b><p>Deja las visitas grandes para los próximos días; hoy basta con aterrizar.</p></div></div>
+    </article>
+    <article class="day" id="dia5">
+      <div class="day-head"><span class="day-number">05</span><div><span class="day-date">Sábado · este de Tokio</span><h3>🏮 Asakusa, Ueno y Akihabara</h3></div></div>
+      <p class="day-lead">Un día para combinar templos, calles comerciales y el ambiente moderno de Tokio. Puedes acortarlo cuando quieras.</p>
+      <div class="flow"><div class="flow-item"><b>Empieza por Asakusa</b><p>Sensō-ji y Nakamise Street; recorre los puestos sin prisa.</p></div><div class="flow-item"><b>Elige una parada</b><p>Kappabashi para tiendas de cocina o Ueno para pasear y descansar.</p></div><div class="flow-item"><b>Cuando caiga la tarde</b><p>Acércate a Akihabara si te apetece ver sus tiendas y luces.</p></div></div>
+      <img class="photo" src="Japan2026_assets/image4.jpeg" alt="Akihabara iluminado por la noche">
+    </article>
+    <article class="day" id="dia6">
+      <div class="day-head"><span class="day-number">06</span><div><span class="day-date">Domingo · oeste de Tokio</span><h3>🌳 Meiji, Harajuku y Shibuya</h3></div></div>
+      <p class="day-lead">Agrupa estas zonas cercanas y deja que el paseo marque el ritmo: jardín, santuario, tiendas y cruce de barrios.</p>
+      <div class="flow"><div class="flow-item"><b>Un rato verde</b><p>Shinjuku Gyoen o el santuario Meiji; escoge según tus ganas y el tiempo.</p></div><div class="flow-item"><b>Curiosear</b><p>Takeshita Street y las calles de Harajuku, con una pausa para comer.</p></div><div class="flow-item"><b>Atardecer en Shibuya</b><p>Shibuya Crossing y, si te interesa, Shibuya Sky.</p></div></div>
+      <div class="callout"><strong>Reserva importante:</strong> la presentación recomienda reservar Shibuya Sky. Comprueba disponibilidad y hora de entrada antes de organizar ese día.</div>
+      <img class="photo" src="Japan2026_assets/image5.jpeg" alt="Torii de madera en un santuario de Tokio">
+    </article>
+    <article class="day" id="dia7">
+      <div class="day-head"><span class="day-number">07</span><div><span class="day-date">Lunes · mercado y bahía</span><h3>🐟 Tsukiji, Ginza y luces de Tokio</h3></div></div>
+      <p class="day-lead">Una propuesta para el centro: mercado por la mañana, una pausa para comer y elige una o dos visitas para la tarde.</p>
+      <div class="flow"><div class="flow-item"><b>Por la mañana</b><p>Tsukiji Outer Market y paseo por Ginza.</p></div><div class="flow-item"><b>Una parada cultural</b><p>Santuario Hie, si te encaja en el recorrido.</p></div><div class="flow-item"><b>Por la tarde</b><p>TeamLab o Tokyo Tower: elige según reservas, energía y distancias.</p></div></div>
+      <img class="photo" src="Japan2026_assets/image6.jpeg" alt="Mercado japonés cubierto">
+    </article>
+  </section>
 
-    <section id="kioto">
-        <h2 class="section">⛩️ Kioto · 8–12 diciembre</h2>
-        <div class="day" id="dia8">
-            <span class="badge">Martes 8</span>
-            <h3>🚄 Tokio a Kioto · centro de Kioto</h3>
-            <p>Llegada desde Tokio y dejar las maletas en KIORI Exec Muromachi. Día flexible según la hora de llegada.</p>
-            <ul><li>Nishiki Market para recorrer sus puestos y probar productos locales; algunos pueden cerrar pronto.</li><li>Pasear por las galerías de Teramachi y Shinkyogoku.</li><li>Recorrer las calles más tranquilas de Muromachi y Shinmachi.</li><li>Al atardecer, caminar junto al río Takase y por Kiyamachi.</li><li>Cena por Pontocho.</li></ul>
-            <img class="photo" src="Japan2026_assets/image8.jpeg" alt="Calle tradicional de Kioto">
-        </div>
-        <div class="day" id="dia9">
-            <span class="badge">Miércoles 9</span>
-            <h3>⛩️ Fushimi Inari y templos del sur</h3>
-            <div class="table-container"><table class="travel-table"><thead><tr><th>Hora aproximada</th><th>Visita</th></tr></thead><tbody>
-                <tr><td>07:00</td><td>Salida hacia Fushimi Inari</td></tr><tr><td>07:30–09:00</td><td>Fushimi Inari y recorrido por los torii</td></tr><tr><td>09:00–10:00</td><td>Desplazamiento hacia Higashiyama y desayuno</td></tr><tr><td>10:00–11:30</td><td>Kiyomizu-dera</td></tr><tr><td>11:30–13:00</td><td>Sannenzaka, Ninenzaka y pagoda Yasaka</td></tr><tr><td>13:00–14:00</td><td>Comida</td></tr><tr><td>14:00–15:30</td><td>Ishibe-koji, Nene-no-michi y Kodai-ji</td></tr><tr><td>15:30–17:00</td><td>Maruyama Park y Yasaka-jinja</td></tr><tr><td>Atardecer</td><td>Gion Shirakawa y sus callejuelas</td></tr>
-            </tbody></table></div>
-            <img class="photo" src="Japan2026_assets/image9.jpeg" alt="Torii rojos de Fushimi Inari">
-        </div>
-        <div class="day" id="dia10">
-            <span class="badge">Jueves 10 · contenido de la diapositiva</span>
-            <h3>🎋 Arashiyama, Kioto occidental y notas de Osaka</h3>
-            <div class="timeline">
-                <div class="card"><h4>Por la mañana · Arashiyama</h4><ul><li>Bosque de bambú temprano.</li><li>Templo Tenryu-ji y sus jardines.</li><li>Puente Togetsukyo y paseo junto al río.</li><li>Recorrer las calles secundarias y comer por Arashiyama.</li></ul></div>
-                <div class="card"><h4>Por la tarde · norte de Kioto</h4><ul><li>Kinkaku-ji, el Pabellón Dorado.</li><li>Ryoan-ji si queda tiempo.</li></ul></div>
-                <div class="card"><h4>Nota de Osaka incluida en la diapositiva</h4><ul><li>Castillo de Osaka y Kuromon Market.</li><li>Nipponbashi o Amerikamura, Shinsaibashi y Dotonbori.</li><li>Día completo, sin intentar volver demasiado pronto.</li></ul></div>
-            </div>
-            <div class="notice">El título menciona Arashiyama y Kioto occidental, pero el texto también incluye un plan de Osaka para el mismo jueves.</div>
-            <img class="photo" src="Japan2026_assets/image10.jpeg" alt="Bosque de bambú de Arashiyama">
-        </div>
-        <div class="day" id="dia11">
-            <span class="badge">Viernes 11 · contenido de la diapositiva</span>
-            <h3>🏯 Kioto histórico, castillo y compras</h3>
-            <ul><li>7:30 · Salir hacia Arashiyama.</li><li>8:00 · Bosque de bambú y santuario Nonomiya.</li><li>8:30–10:00 · Jardines de Tenryu-ji.</li><li>Puente Togetsukyo y paseo junto al río; comer por Arashiyama.</li><li>Primera hora de la tarde · desplazamiento hacia Nanzen-ji.</li><li>Nanzen-ji y su acueducto.</li><li>Si queda tiempo y energía, paseo parcial por el Camino de la Filosofía.</li></ul>
-            <div class="notice">El encabezado de la diapositiva habla de Kioto histórico, castillo y compras, pero el detalle horario describe Arashiyama y Nanzen-ji.</div>
-            <img class="photo" src="Japan2026_assets/image11.jpeg" alt="Paisaje de Arashiyama">
-        </div>
-        <div class="day" id="dia12">
-            <span class="badge">Sábado 12</span>
-            <h3>🚆 Kioto → Takayama</h3>
-            <p>Salida de Kioto y llegada a Takayama. La diapositiva indica el inicio de la estancia el día 12, sin actividades adicionales.</p>
-        </div>
-    </section>
+  <section id="kioto">
+    <span class="section-kicker">8—12 diciembre</span><h2 class="section">⛩️ Kioto</h2>
+    <article class="day" id="dia8">
+      <div class="day-head"><span class="day-number">08</span><div><span class="day-date">Martes · llegada</span><h3>🚄 Tokio a Kioto y primera vuelta por el centro</h3></div></div>
+      <p class="day-lead">El día depende del tren y del check-in. Deja las maletas en KIORI Exec Muromachi y escoge un paseo cercano.</p>
+      <div class="flow"><div class="flow-item"><b>Si llegas temprano</b><p>Nishiki Market para curiosear y probar algo local; algunos puestos cierran pronto.</p></div><div class="flow-item"><b>Paseo sencillo</b><p>Teramachi y Shinkyogoku, las galerías comerciales del centro.</p></div><div class="flow-item"><b>Plan alternativo</b><p>Descansar y cenar cerca del alojamiento. No hace falta llenar el primer día.</p></div></div>
+      <img class="photo" src="Japan2026_assets/image8.jpeg" alt="Calle tradicional de Kioto">
+    </article>
+    <article class="day" id="dia9">
+      <div class="day-head"><span class="day-number">09</span><div><span class="day-date">Miércoles · sur de Kioto</span><h3>⛩️ Fushimi Inari y templos del sur</h3></div></div>
+      <p class="day-lead">Fushimi Inari suele disfrutarse mejor con tiempo y menos apuro. Después, continúa por el sur solo si te apetece y las conexiones te vienen bien.</p>
+      <div class="flow"><div class="flow-item"><b>La visita principal</b><p>Recorre los torii de Fushimi Inari a tu ritmo; no hace falta completar toda la montaña.</p></div><div class="flow-item"><b>Completa el día</b><p>Elige uno de los templos del sur indicados en tus notas y deja un margen para el traslado.</p></div><div class="flow-item"><b>Recarga</b><p>Haz una pausa para comer y vuelve al alojamiento cuando te apetezca.</p></div></div>
+      <img class="photo" src="Japan2026_assets/image9.jpeg" alt="Torii rojos de Fushimi Inari">
+    </article>
+    <article class="day" id="dia10">
+      <div class="day-head"><span class="day-number">10</span><div><span class="day-date">Jueves · Kioto occidental</span><h3>🎋 Arashiyama, bambú y jardines</h3></div></div>
+      <p class="day-lead">Agrupa los lugares de Arashiyama en un paseo y decide sobre la marcha cuánto tiempo quedarte.</p>
+      <div class="flow"><div class="flow-item"><b>Empieza por el bosque</b><p>El bosque de bambú y el santuario Nonomiya, si te interesa incluirlo.</p></div><div class="flow-item"><b>Jardines y río</b><p>Tenryu-ji, el puente Togetsukyo y un paseo junto al río.</p></div><div class="flow-item"><b>Si aún tienes ganas</b><p>Kinkaku-ji o Ryoan-ji pueden ser otra salida; comprueba distancias y horarios antes de añadirlos.</p></div></div>
+      <img class="photo" src="Japan2026_assets/image10.jpeg" alt="Bosque de bambú de Arashiyama">
+    </article>
+    <article class="day" id="dia11">
+      <div class="day-head"><span class="day-number">11</span><div><span class="day-date">Viernes · día flexible</span><h3>🏯 Elige tu segundo día de Kioto</h3></div></div>
+      <p class="day-lead">Las notas originales mezclan Arashiyama, Nanzen-ji, Kioto histórico y compras en días distintos. Para evitar repetir zonas, usa este día para lo que no hayas hecho o para bajar el ritmo.</p>
+      <div class="idea-grid"><div class="idea"><h3>Opción A · templos y paseo</h3><p>Nanzen-ji y un recorrido por los alrededores. Añade una visita cercana solo si te queda tiempo.</p></div><div class="idea"><h3>Opción B · día de Osaka</h3><p>Si prefieres la excursión anotada en la presentación: Castillo de Osaka, Kuromon Market, Shinsaibashi y Dotonbori. Es una alternativa de día completo, no un añadido al plan de Arashiyama.</p></div><div class="idea"><h3>Opción C · descansar</h3><p>Vuelve a una zona que te haya gustado, busca tiendas o disfruta una tarde sin agenda.</p></div></div>
+      <div class="callout"><strong>Consejo:</strong> elige una sola opción principal. Osaka y varios barrios de Kioto en el mismo día harían el recorrido demasiado apretado.</div>
+      <img class="photo" src="Japan2026_assets/image11.jpeg" alt="Paisaje de Arashiyama">
+    </article>
+    <article class="day" id="dia12">
+      <div class="day-head"><span class="day-number">12</span><div><span class="day-date">Sábado · traslado</span><h3>🚆 Kioto → Takayama</h3></div></div>
+      <p class="day-lead">Día de cambio de ciudad. Consulta el trayecto y la hora del alojamiento; guarda las visitas para cuando hayas llegado y dejado el equipaje.</p>
+      <div class="flow"><div class="flow-item"><b>Prioridad</b><p>Traslado, check-in y orientarte por los alrededores.</p></div><div class="flow-item"><b>Si queda tiempo</b><p>Un paseo corto y una cena tranquila en Takayama.</p></div></div>
+    </article>
+  </section>
 
-    <section id="takayama">
-        <h2 class="section">🏘️ Takayama · 12–14 diciembre</h2>
-        <div class="card"><p>Estancia del 12 al 14 de diciembre. El itinerario no especifica visitas para los días 13 y 14.</p><img class="photo" src="Japan2026_assets/image12.png" alt="Confirmación de alojamiento en Takayama"></div>
-    </section>
+  <section id="takayama">
+    <span class="section-kicker">12—14 diciembre</span><h2 class="section">🏘️ Takayama</h2>
+    <div class="card"><p>Dos noches para cambiar el ritmo después de las ciudades grandes. El material original no fija visitas para estos días, así que mantén el plan abierto y usa la confirmación del alojamiento y las condiciones locales para decidir qué hacer.</p><span class="tag" style="margin-top:16px">12 dic · llegada desde Kioto</span><span class="tag">13 dic · día libre</span><span class="tag">14 dic · salida hacia Kanazawa</span><img class="photo" src="Japan2026_assets/image12.png" alt="Confirmación del alojamiento en Takayama"></div>
+  </section>
 
-    <section id="kanazawa">
-        <h2 class="section">🌿 Kanazawa · 14–15 diciembre</h2>
-        <div class="card"><p>Llegada a Kanazawa el día 14, salida el 15 y trayecto Kanazawa → Tokio. La presentación no detalla actividades para la estancia.</p><img class="photo" src="Japan2026_assets/image13.png" alt="Información de alojamiento en Kanazawa"></div>
-    </section>
+  <section id="kanazawa">
+    <span class="section-kicker">14—15 diciembre</span><h2 class="section">🌿 Kanazawa</h2>
+    <div class="card"><p>Una noche antes de volver a Tokio. La presentación no detalla actividades: prioriza llegar, dejar el equipaje y elegir un paseo que encaje con el tiempo disponible. Comprueba el transporte de regreso con antelación.</p><span class="tag" style="margin-top:16px">14 dic · llegada desde Takayama</span><span class="tag">15 dic · regreso a Tokio</span><img class="photo" src="Japan2026_assets/image13.png" alt="Información del alojamiento en Kanazawa"></div>
+  </section>
 
-    <section id="restaurantes">
-        <h2 class="section">🍜 Restaurantes</h2>
-        <div class="timeline">
-            <div class="card"><h3>Tokio</h3><ul><li>Sushibar Fuji</li><li>Ichiran Ramen</li><li>Bairin Honten · katsu</li><li>Hinatomaru Asakusa · running sushi</li><li>Grill Bon · katsu sando</li></ul><p><a href="https://maps.app.goo.gl/hVA35VjTSELF6YZT6?g_st=ic" target="_blank" rel="noopener noreferrer">Sushibar Fuji en Google Maps</a></p></div>
-            <div class="card"><h3>Osaka</h3><ul><li>Wagyu Idaten</li></ul></div>
-        </div>
-    </section>
+  <section id="restaurantes">
+    <span class="section-kicker">Paradas para comer</span><h2 class="section">🍜 Ideas guardadas</h2>
+    <div class="idea-grid">
+      <div class="idea"><h3>Tokio</h3><ul class="list"><li>Sushibar Fuji</li><li>Ichiran Ramen</li><li>Bairin Honten · katsu</li><li>Hinatomaru Asakusa · sushi giratorio</li><li>Grill Bon · katsu sando</li></ul></div>
+      <div class="idea"><h3>Osaka</h3><ul class="list"><li>Wagyu Idaten</li></ul><p>Una opción para el día de excursión; verifica ubicación y disponibilidad.</p></div>
+      <div class="idea"><h3>En ruta</h3><p>Deja hueco para elegir sobre la marcha. Los mercados, galerías y estaciones pueden ser buenas paradas prácticas entre visitas.</p></div>
+    </div>
+  </section>
 </main>
-
-<footer><p>🇯🇵 Japón 2026 · Buen viaje</p></footer>
+<footer><p>🇯🇵 Japón 2026 · Buen viaje</p><p>Guía flexible: los tiempos de paseo son aproximados y las reservas mandan.</p></footer>
 </body>
 </html>
